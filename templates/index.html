@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Voice Transcriber</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="speechContainer">
+   <Center> <h1>Upload a Audio File (.wav)</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <br>
+        <input type="submit" value="Transcribe" />
+    </form>
+
+    {% if transcript != "" %}
+    <div id="speechTranscriptContainer">
+        <h1>Transcript</h1>
+        <p>{{transcript}}</p>
+    </div>
+    {% endif %}
+       </Center>
+</div>
+
+</body>
+</html>
